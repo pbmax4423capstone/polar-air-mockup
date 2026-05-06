@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[DEMO] Polar Air Solutions — Social Media Mockups</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ice-500: #2E7AAB;
+    --deep:    #0A2540;
+    --warm:    #FF6B35;
+    --paper:   #F4F4F0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--paper);
+    color: #111;
+    padding: 32px 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1280px; margin: 0 auto; }
+  .doc-header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding: 32px 24px;
+    background: var(--deep);
+    color: white;
+    border-radius: 20px;
+  }
+  .doc-header h1 {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .doc-header h1 em {
+    font-style: italic;
+    color: var(--warm);
+    font-weight: 400;
+  }
+  .doc-header p { opacity: 0.8; max-width: 620px; margin: 0 auto; font-size: 16px; }
+
+  .platform-section {
+    margin-bottom: 64px;
+  }
+  .platform-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--deep);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .platform-label .icon-wrap {
+    width: 28px; height: 28px;
+    background: white;
+    border-radius: 6px;
+    display: grid; place-items: center;
+  }
+
+  /* ============== FACEBOOK ============== */
+  .fb-frame {
+    background: #f0f2f5;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #d8dadf;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .fb-cover {
+    height: 220px;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255,107,53,0.3), transparent 50%),
+      linear-gradient(135deg, #0A2540 0%, #2E7AAB 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .fb-cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .fb-cover-text {
+    position: absolute;
+    bottom: 24px; left: 32px;
+    color: white;
+    z-index: 2;
+  }
+  .fb-cover-text .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(255,255,255,0.15);
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    backdrop-filter: blur(6px);
+  }
+  .fb-cover-text h2 {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .fb-cover-text h2 em { color: var(--warm); font-style: italic; font-weight: 400; }
+
+  .fb-profile-section {
+    background: white;
+    padding: 16px 24px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    border-bottom: 1px solid #e4e6eb;
+    position: relative;
+    margin-top: -36px;
+  }
+  .fb-pic {
+    width: 168px; height: 168px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ice-500), var(--deep));
+    border: 4px solid white;
+    display: grid; place-items: center;
+    color: white;
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .fb-pic::after {
+    content: '';
+    position: absolute;
+    bottom: 8px; right: 8px;
+    width: 36px; height: 36px;
+    background: var(--warm);
+    border-radius: 50%;
+    border: 3px solid white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .fb-info { padding-bottom: 16px; flex: 1; }
+  .fb-info h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .fb-info .stats {
+    color: #65676b;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .fb-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+  .fb-btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .fb-btn-primary { background: #1877F2; color: white; }
+  .fb-btn-secondary { background: #e4e6eb; color: #050505; }
+
+  .fb-tabs {
+    background: white;
+    border-bottom: 1px solid #e4e6eb;
+    padding: 0 24px;
+    display: flex;
+    gap: 4px;
+  }
+  .fb-tab {
+    padding: 14px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #65676b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+  }
+  .fb-tab.active { color: #1877F2; border-bottom-color: #1877F2; }
+
+  .fb-feed {
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 800px) { .fb-feed { grid-template-columns: 1fr; } }
+
+  .fb-post {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e4e6eb;
+  }
+  .fb-post-head {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .fb-post-head .avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ice-500), var(--deep));
+    display: grid; place-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .fb-post-head .meta { font-size: 14px; }
+  .fb-post-head strong { display: block; font-weight: 600; }
+  .fb-post-head span { color: #65676b; font-size: 12px; }
+  .fb-post-body {
+    padding: 0 16px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .fb-post-image {
+    height: 220px;
+    background: linear-gradient(135deg, var(--deep), var(--ice-500));
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 32px 24px;
+    font-family: 'Bricolage Grotesque', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    position: relative;
+    overflow: hidden;
+  }
+  .fb-post-image::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .fb-post-image .content { position: relative; z-index: 2; }
+  .fb-post-image .small-tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm);
+    margin-bottom: 12px;
+  }
+  .fb-post-image .big {
+    font-size: 32px;
+  }
+  .fb-post-image.warm-bg {
+    background: linear-gradient(135deg, var(--warm), #FF4F1F);
+  }
+  .fb-post-image.ice-bg {
+    background: linear-gradient(135deg, #B7D4E5, var(--ice-500));
+    color: var(--deep);
+  }
+  .fb-post-image.ice-bg .small-tag { color: var(--warm); }
+  .fb-post-actions {
+    display: flex;
+    border-top: 1px solid #e4e6eb;
+    padding: 8px;
+  }
+  .fb-action {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: #65676b;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .fb-action:hover { background: #f0f2f5; }
+
+  /* ============== X / TWITTER ============== */
+  .x-frame {
+    background: #000;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: 'TwitterChirp', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    border: 1px solid #2f3336;
+  }
+  .x-cover {
+    height: 200px;
+    background:
+      radial-gradient(circle at 80% 30%, rgba(255,107,53,0.35), transparent 60%),
+      linear-gradient(135deg, #0A2540 0%, #2E7AAB 100%);
+    position: relative;
+  }
+  .x-cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .x-profile-section {
+    padding: 16px 24px;
+    position: relative;
+  }
+  .x-pic {
+    width: 134px; height: 134px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ice-500), var(--deep));
+    border: 4px solid #000;
+    display: grid; place-items: center;
+    color: white;
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-top: -68px;
+    margin-bottom: 12px;
+  }
+  .x-name { display: flex; align-items: center; gap: 6px; }
+  .x-name h1 { font-size: 20px; font-weight: 800; }
+  .x-verified {
+    width: 20px; height: 20px;
+    background: #1d9bf0;
+    border-radius: 50%;
+    display: grid; place-items: center;
+  }
+  .x-verified svg { color: white; }
+  .x-handle { color: #71767b; font-size: 15px; margin-bottom: 12px; }
+  .x-bio { font-size: 15px; line-height: 1.4; margin-bottom: 12px; }
+  .x-meta { color: #71767b; font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+  .x-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .x-stats { display: flex; gap: 16px; font-size: 14px; color: #71767b; margin-bottom: 16px; }
+  .x-stats strong { color: white; }
+  .x-tabs {
+    display: flex;
+    border-bottom: 1px solid #2f3336;
+  }
+  .x-tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    color: #71767b;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .x-tab.active { color: white; border-bottom: 4px solid #1d9bf0; }
+
+  .x-tweet {
+    padding: 16px 20px;
+    border-bottom: 1px solid #2f3336;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .x-tweet:hover { background: rgba(255,255,255,0.02); }
+  .x-tweet-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ice-500), var(--deep));
+    display: grid; place-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .x-tweet-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+  .x-tweet-head strong { font-weight: 700; }
+  .x-tweet-head .handle { color: #71767b; font-weight: 400; }
+  .x-tweet-head .time { color: #71767b; font-weight: 400; }
+  .x-tweet-body {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+  }
+  .x-tweet-body .hashtag { color: #1d9bf0; }
+  .x-tweet-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 425px;
+    color: #71767b;
+    font-size: 13px;
+  }
+  .x-tweet-action { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* ============== TIKTOK ============== */
+  .tt-frame {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    color: white;
+    border: 1px solid #2a2a2a;
+    font-family: 'ProximaNova', -apple-system, sans-serif;
+  }
+  .tt-header {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  @media (max-width: 600px) { .tt-header { flex-direction: column; align-items: flex-start; } }
+  .tt-pic {
+    width: 116px; height: 116px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ice-500), var(--deep));
+    display: grid; place-items: center;
+    color: white;
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    flex-shrink: 0;
+  }
+  .tt-info { flex: 1; }
+  .tt-info h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tt-info .username {
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .tt-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .tt-btn {
+    background: #fe2c55;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  .tt-btn.secondary { background: rgba(255,255,255,0.12); }
+  .tt-stats {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .tt-stats strong { color: white; font-size: 17px; font-weight: 700; }
+  .tt-bio { font-size: 14px; line-height: 1.4; max-width: 600px; }
+
+  .tt-tabs {
+    display: flex;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .tt-tab {
+    flex: 1;
+    text-align: center;
+    padding: 14px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .tt-tab.active { color: white; border-bottom: 2px solid white; }
+
+  .tt-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 4px;
+  }
+  @media (max-width: 800px) { .tt-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 500px) { .tt-grid { grid-template-columns: repeat(2, 1fr); } }
+  .tt-vid {
+    aspect-ratio: 9 / 16;
+    border-radius: 4px;
+    background: linear-gradient(180deg, var(--deep), #000);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 16px;
+  }
+  .tt-vid::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .tt-vid.warm { background: linear-gradient(180deg, var(--warm), #B83A1F); }
+  .tt-vid.ice  { background: linear-gradient(180deg, var(--ice-500), var(--deep)); }
+  .tt-vid.dark { background: linear-gradient(180deg, #050E1A, #000); }
+  .tt-vid-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-family: 'Bricolage Grotesque', serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: 18px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .tt-vid-content .tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+    opacity: 0.7;
+  }
+  .tt-views {
+    position: absolute;
+    bottom: 8px; left: 8px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 3;
+  }
+
+  /* Posting calendar */
+  .calendar {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 32px;
+    border: 1px solid #e4e6eb;
+  }
+  .calendar h3 {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .calendar p { color: #65676b; margin-bottom: 24px; font-size: 14px; }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 700px) { .cal-grid { grid-template-columns: 1fr; } }
+  .cal-col {
+    border: 1px solid #e4e6eb;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .cal-col h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--deep);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--warm);
+  }
+  .cal-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 14px;
+  }
+  .cal-item:last-child { border-bottom: none; }
+  .cal-item strong { display: block; font-weight: 600; margin-bottom: 2px; color: var(--deep); }
+  .cal-item span { color: #65676b; font-size: 13px; }
+
+  /* DEMO MOCKUP banner */
+  .demo-banner {
+    background: repeating-linear-gradient(
+      45deg,
+      #FF6B35,
+      #FF6B35 20px,
+      #E54A14 20px,
+      #E54A14 40px
+    );
+    color: white;
+    padding: 10px 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: -32px -16px 24px -16px;
+    border-bottom: 2px solid #B83A1F;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .demo-banner a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  ⚠ Demo mockup · Not live accounts · All follower counts, engagement & post stats are placeholders<a href="index.html">← Back to package</a>
+</div>
+
+<div class="container">
+
+  <div class="doc-header">
+    <h1>Polar Air Solutions <em>· Social Mockups</em></h1>
+    <p><strong>Demo mockup of proposed social presence for Polar Air Solutions.</strong> All follower counts, engagement numbers, and view counts are placeholders. Sample post copy demonstrates voice and Gulf Coast HVAC seasonality — would be human-reviewed before publishing.</p>
+  </div>
+
+  <!-- ============== FACEBOOK ============== -->
+  <section class="platform-section">
+    <div class="platform-label">
+      <div class="icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></div>
+      Facebook · Polar Air Solutions
+    </div>
+
+    <div class="fb-frame">
+      <div class="fb-cover">
+        <div class="fb-cover-text">
+          <span class="tag">HVAC · Mobile, AL · Family-Owned</span>
+          <h2>Cool comfort for the<br>Gulf Coast. <em>Done right.</em></h2>
+        </div>
+      </div>
+
+      <div class="fb-profile-section">
+        <div class="fb-pic">PA</div>
+        <div class="fb-info">
+          <h1>Polar Air Solutions</h1>
+          <div class="stats">[#,###] likes · [#,###] followers · Open now · (251) 555-0199</div>
+          <div class="fb-buttons">
+            <button class="fb-btn fb-btn-primary">+ Follow</button>
+            <button class="fb-btn fb-btn-secondary">💬 Message</button>
+            <button class="fb-btn fb-btn-secondary">📞 Call now</button>
+            <button class="fb-btn fb-btn-secondary">⋯ More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="fb-tabs">
+        <div class="fb-tab active">Posts</div>
+        <div class="fb-tab">About</div>
+        <div class="fb-tab">Reviews</div>
+        <div class="fb-tab">Photos</div>
+        <div class="fb-tab">Videos</div>
+        <div class="fb-tab">Services</div>
+      </div>
+
+      <div class="fb-feed">
+
+        <div class="fb-post">
+          <div class="fb-post-head">
+            <div class="avatar">PA</div>
+            <div class="meta"><strong>Polar Air Solutions</strong><span>Tuesday at 8:14 AM · 🌞</span></div>
+          </div>
+          <div class="fb-post-body">
+            ☀️ Mobile is hitting 94° today with a heat index of 108°. If your AC is making weird noises or struggling to cool the back bedroom, don't wait — that's how compressors die in August.<br><br>
+            Free diagnostic this week with any tune-up. Tap to schedule. ⬇️
+          </div>
+          <div class="fb-post-image warm-bg">
+            <div class="content">
+              <span class="small-tag">Heat advisory</span>
+              <div class="big">94°F TODAY<br>108° HEAT INDEX</div>
+              <div style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500; opacity: 0.85; margin-top: 12px;">Don't let your AC give up. ⚡</div>
+            </div>
+          </div>
+          <div class="fb-post-actions">
+            <div class="fb-action">👍 Like · —</div>
+            <div class="fb-action">💬 Comment · —</div>
+            <div class="fb-action">↗ Share · —</div>
+          </div>
+        </div>
+
+        <div class="fb-post">
+          <div class="fb-post-head">
+            <div class="avatar">PA</div>
+            <div class="meta"><strong>Polar Air Solutions</strong><span>Sunday at 3:22 PM · ⛈️</span></div>
+          </div>
+          <div class="fb-post-body">
+            Hurricane season is here. Three things every Mobile homeowner should do for their HVAC BEFORE the next storm:<br><br>
+            ✅ Snap a photo of your outdoor unit (insurance gold)<br>
+            ✅ Know how to shut off power to the unit<br>
+            ✅ Have a hurricane strap installed if you don't already<br><br>
+            We do free pre-storm inspections for plan members. DM us. 🌀
+          </div>
+          <div class="fb-post-image ice-bg">
+            <div class="content">
+              <span class="small-tag">Hurricane Prep · Free Guide</span>
+              <div class="big">Storm-Ready<br>HVAC Checklist</div>
+              <div style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500; margin-top: 12px;">3 things to do before the next storm 🌀</div>
+            </div>
+          </div>
+          <div class="fb-post-actions">
+            <div class="fb-action">👍 Like · —</div>
+            <div class="fb-action">💬 Comment · —</div>
+            <div class="fb-action">↗ Share · —</div>
+          </div>
+        </div>
+
+        <div class="fb-post">
+          <div class="fb-post-head">
+            <div class="avatar">PA</div>
+            <div class="meta"><strong>Polar Air Solutions</strong><span>Friday at 5:48 PM · ⭐</span></div>
+          </div>
+          <div class="fb-post-body">
+            5⭐ from Sarah in West Mobile this week 👇<br><br>
+            <em>"Been on their maintenance plan for 5 years. Same tech every time, knows our system, catches small issues before they're big problems. Worth every penny of the $19/month."</em><br><br>
+            Thank you Sarah 🙏 We love serving Mobile families.
+          </div>
+          <div class="fb-post-image">
+            <div class="content">
+              <span class="small-tag">Customer Review</span>
+              <div style="font-size: 28px;">★★★★★</div>
+              <div style="font-family: 'Bricolage Grotesque', serif; font-size: 22px; font-weight: 600; margin-top: 16px; line-height: 1.2;">"Catches small issues before they're big problems."</div>
+              <div style="font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 500; opacity: 0.7; margin-top: 12px;">— [Real customer name + neighborhood]</div>
+            </div>
+          </div>
+          <div class="fb-post-actions">
+            <div class="fb-action">👍 Like · —</div>
+            <div class="fb-action">💬 Comment · —</div>
+            <div class="fb-action">↗ Share · —</div>
+          </div>
+        </div>
+
+        <div class="fb-post">
+          <div class="fb-post-head">
+            <div class="avatar">PA</div>
+            <div class="meta"><strong>Polar Air Solutions</strong><span>Wednesday at 11:30 AM · 💡</span></div>
+          </div>
+          <div class="fb-post-body">
+            Weekly tip: that 1-inch fiberglass filter? It's not great for Gulf Coast humidity. 💨<br><br>
+            For Mobile homes we recommend a 4-inch pleated filter (MERV 11) — catches more pollen, mold spores, and Saharan dust, AND it lasts 6 months instead of 30 days.<br><br>
+            Save $$$ AND breathe easier. Drop a 🌬️ if you want our brand recommendations.
+          </div>
+          <div class="fb-post-image">
+            <div class="content">
+              <span class="small-tag">Tip Tuesday</span>
+              <div class="big">SWAP YOUR<br>1" FILTER</div>
+              <div style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500; opacity: 0.85; margin-top: 12px;">Gulf Coast humidity needs a thicker filter 💨</div>
+            </div>
+          </div>
+          <div class="fb-post-actions">
+            <div class="fb-action">👍 Like · —</div>
+            <div class="fb-action">💬 Comment · —</div>
+            <div class="fb-action">↗ Share · —</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== X / TWITTER ============== -->
+  <section class="platform-section">
+    <div class="platform-label">
+      <div class="icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+      X · @PolarAirMobile
+    </div>
+
+    <div class="x-frame">
+      <div class="x-cover"></div>
+      <div class="x-profile-section">
+        <div class="x-pic">PA</div>
+        <div class="x-name">
+          <h1>Polar Air Solutions</h1>
+          <div class="x-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="x-handle">@PolarAirMobile</div>
+        <div class="x-bio">Mobile, AL HVAC. Family-owned since 2008. Same-day AC + heating service across Mobile + Baldwin County. 24/7 emergency. ❄️🔥</div>
+        <div class="x-meta">
+          <span>📍 Mobile, AL</span>
+          <span>🔗 polarairmobile.com</span>
+          <span>📅 Joined 2009</span>
+        </div>
+        <div class="x-stats">
+          <span><strong>[###]</strong> Following</span>
+          <span><strong>[#,###]</strong> Followers</span>
+        </div>
+      </div>
+
+      <div class="x-tabs">
+        <div class="x-tab active">Posts</div>
+        <div class="x-tab">Replies</div>
+        <div class="x-tab">Highlights</div>
+        <div class="x-tab">Media</div>
+        <div class="x-tab">Likes</div>
+      </div>
+
+      <div class="x-tweet">
+        <div class="x-tweet-avatar">PA</div>
+        <div>
+          <div class="x-tweet-head">
+            <strong>Polar Air Solutions</strong>
+            <div class="x-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="handle">@PolarAirMobile</span>
+            <span class="time">· 2h</span>
+          </div>
+          <div class="x-tweet-body">94° in Mobile and your AC just quit?
+
+We can have a tech at your door before sundown. Same-day, no overtime fee.
+
+(251) 555-0199 ☎️ <span class="hashtag">#MobileAL</span> <span class="hashtag">#HVAC</span></div>
+          <div class="x-tweet-actions">
+            <span class="x-tweet-action">💬 —</span>
+            <span class="x-tweet-action">🔁 —</span>
+            <span class="x-tweet-action">❤️ —</span>
+            <span class="x-tweet-action">📊 —</span>
+            <span class="x-tweet-action">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="x-tweet">
+        <div class="x-tweet-avatar">PA</div>
+        <div>
+          <div class="x-tweet-head">
+            <strong>Polar Air Solutions</strong>
+            <div class="x-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="handle">@PolarAirMobile</span>
+            <span class="time">· 1d</span>
+          </div>
+          <div class="x-tweet-body">PSA for Mobile homeowners 🌀
+
+If a hurricane is forecast within 72 hrs:
+1️⃣ Photo your outdoor unit (insurance)
+2️⃣ Know your unit's breaker
+3️⃣ DON'T cover it with a tarp (traps moisture)
+
+Plan members get a free pre-storm check. DM us.</div>
+          <div class="x-tweet-actions">
+            <span class="x-tweet-action">💬 —</span>
+            <span class="x-tweet-action">🔁 —</span>
+            <span class="x-tweet-action">❤️ —</span>
+            <span class="x-tweet-action">📊 —</span>
+            <span class="x-tweet-action">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="x-tweet">
+        <div class="x-tweet-avatar">PA</div>
+        <div>
+          <div class="x-tweet-head">
+            <strong>Polar Air Solutions</strong>
+            <div class="x-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="handle">@PolarAirMobile</span>
+            <span class="time">· 2d</span>
+          </div>
+          <div class="x-tweet-body">Quote of the week from a Mobile homeowner:
+
+"My old company sent a different guy every visit and none of them remembered my system. Polar Air sends the same tech. He knows our house."
+
+That's the whole job 🤝</div>
+          <div class="x-tweet-actions">
+            <span class="x-tweet-action">💬 —</span>
+            <span class="x-tweet-action">🔁 —</span>
+            <span class="x-tweet-action">❤️ —</span>
+            <span class="x-tweet-action">📊 —</span>
+            <span class="x-tweet-action">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="x-tweet">
+        <div class="x-tweet-avatar">PA</div>
+        <div>
+          <div class="x-tweet-head">
+            <strong>Polar Air Solutions</strong>
+            <div class="x-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="handle">@PolarAirMobile</span>
+            <span class="time">· 3d</span>
+          </div>
+          <div class="x-tweet-body">Real talk: a "free" AC inspection that pressure-sells you a $12,000 system isn't free.
+
+We do flat-rate quotes. We tell you what's wrong, what it costs to fix, and what it costs to replace. Then YOU decide. No pressure. No commission games.
+
+That's how we built Polar Air. <span class="hashtag">#MobileAL</span></div>
+          <div class="x-tweet-actions">
+            <span class="x-tweet-action">💬 —</span>
+            <span class="x-tweet-action">🔁 —</span>
+            <span class="x-tweet-action">❤️ —</span>
+            <span class="x-tweet-action">📊 —</span>
+            <span class="x-tweet-action">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="x-tweet">
+        <div class="x-tweet-avatar">PA</div>
+        <div>
+          <div class="x-tweet-head">
+            <strong>Polar Air Solutions</strong>
+            <div class="x-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="handle">@PolarAirMobile</span>
+            <span class="time">· 5d</span>
+          </div>
+          <div class="x-tweet-body">SEER ratings explained for normal humans 👇
+
+SEER 13: bare minimum (old systems)
+SEER 16: solid Mobile choice 👍
+SEER 18+: pays back in ~5 yrs in our climate
+SEER 20+: only if you're staying 10+ yrs
+
+Mobile heat = SEER matters more here than almost anywhere else in the country.</div>
+          <div class="x-tweet-actions">
+            <span class="x-tweet-action">💬 —</span>
+            <span class="x-tweet-action">🔁 —</span>
+            <span class="x-tweet-action">❤️ —</span>
+            <span class="x-tweet-action">📊 —</span>
+            <span class="x-tweet-action">↗</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== TIKTOK ============== -->
+  <section class="platform-section">
+    <div class="platform-label">
+      <div class="icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.84-.1z"/></svg></div>
+      TikTok · @polarairmobile
+    </div>
+
+    <div class="tt-frame">
+      <div class="tt-header">
+        <div class="tt-pic">PA</div>
+        <div class="tt-info">
+          <h1>Polar Air Solutions <svg width="18" height="18" viewBox="0 0 24 24" fill="#20D5EC"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="11" fill="#20D5EC"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></h1>
+          <div class="username">@polarairmobile</div>
+          <div class="tt-buttons">
+            <button class="tt-btn">Follow</button>
+            <button class="tt-btn secondary">Message</button>
+            <button class="tt-btn secondary">⋯</button>
+          </div>
+          <div class="tt-stats">
+            <span><strong>[###]</strong> Following</span>
+            <span><strong>[##.#K]</strong> Followers</span>
+            <span><strong>[###K]</strong> Likes</span>
+          </div>
+          <div class="tt-bio">🌀 Mobile, AL HVAC<br>❄️ Real techs, real fixes, real talk<br>📞 (251) 555-0199 · 24/7<br>🔗 polarairmobile.com</div>
+        </div>
+      </div>
+
+      <div class="tt-tabs">
+        <div class="tt-tab active">Videos</div>
+        <div class="tt-tab">Reposts</div>
+        <div class="tt-tab">Liked</div>
+      </div>
+
+      <div class="tt-grid">
+        <div class="tt-vid warm">
+          <div class="tt-vid-content">
+            <span class="tag">POV</span>
+            Why your AC freezes up in summer 🥶
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid ice">
+          <div class="tt-vid-content">
+            <span class="tag">Tip</span>
+            The 1 thing every Mobile homeowner forgets 👀
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid dark">
+          <div class="tt-vid-content">
+            <span class="tag">Real</span>
+            What $400 mystery noise actually was 🔧
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid warm">
+          <div class="tt-vid-content">
+            <span class="tag">Hurricane</span>
+            DON'T do this with a tarp 🚫🌀
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid ice">
+          <div class="tt-vid-content">
+            <span class="tag">Filter check</span>
+            Pull yours right now. I'll wait 🤨
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid dark">
+          <div class="tt-vid-content">
+            <span class="tag">Storytime</span>
+            Why I left a "big" HVAC company 🚪
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid warm">
+          <div class="tt-vid-content">
+            <span class="tag">SEER 101</span>
+            Is SEER 20 worth it in Mobile? 🤔
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+        <div class="tt-vid ice">
+          <div class="tt-vid-content">
+            <span class="tag">Day in the life</span>
+            7 AM service call 📞
+          </div>
+          <span class="tt-views">▶ —</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POSTING CALENDAR ============== -->
+  <div class="calendar">
+    <h3>Sample weekly posting cadence (Growth tier)</h3>
+    <p>What "automated AI-assisted, human-reviewed posting" actually looks like across the week. All copy drafted in Polar Air's voice using AI, reviewed and edited before scheduling.</p>
+    <div class="cal-grid">
+      <div class="cal-col">
+        <h4>Facebook · 4–5/wk</h4>
+        <div class="cal-item"><strong>Mon · Tip Tuesday teaser</strong><span>Filter swap, thermostat hack, humidity tip</span></div>
+        <div class="cal-item"><strong>Wed · Behind-the-scenes</strong><span>Tech spotlight, install reveal, before/after</span></div>
+        <div class="cal-item"><strong>Fri · Customer review</strong><span>5★ quote with neighborhood callout</span></div>
+        <div class="cal-item"><strong>Sat · Community/seasonal</strong><span>Heat warning, storm prep, Mardi Gras dispatch</span></div>
+        <div class="cal-item"><strong>Sun · Soft sell</strong><span>Maintenance plan, financing, special offer</span></div>
+      </div>
+      <div class="cal-col">
+        <h4>X · 5–7/wk</h4>
+        <div class="cal-item"><strong>Daily weather/heat hook</strong><span>"94° today, AC giving you the silent treatment?"</span></div>
+        <div class="cal-item"><strong>2× per week: HVAC explainer</strong><span>SEER, refrigerant, sizing, 4×4 vs 1" filter</span></div>
+        <div class="cal-item"><strong>1× per week: customer quote</strong><span>Short, punchy, neighborhood-tagged</span></div>
+        <div class="cal-item"><strong>1× per week: industry hot take</strong><span>"Free inspections aren't free" type posts</span></div>
+        <div class="cal-item"><strong>Weekend: emergency reminder</strong><span>"We answer the phone at 2 AM"</span></div>
+      </div>
+      <div class="cal-col">
+        <h4>TikTok · 2–3/wk</h4>
+        <div class="cal-item"><strong>Tues · POV / explainer</strong><span>"Why your AC freezes" w/ tech voiceover</span></div>
+        <div class="cal-item"><strong>Thurs · Real fix</strong><span>30-sec walkthrough of an actual repair</span></div>
+        <div class="cal-item"><strong>Sat · Storytime / personality</strong><span>Why I left big HVAC, weird calls, tech humor</span></div>
+        <div class="cal-item"><strong>Seasonal pushes</strong><span>Hurricane prep, Mardi Gras week, heatwave</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

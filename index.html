@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Polar Air Solutions — Proposal Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ice-50:  #F0F7FB;
+    --ice-100: #DCEAF3;
+    --ice-300: #7DB1CD;
+    --ice-500: #2E7AAB;
+    --deep:    #0A2540;
+    --warm:    #FF6B35;
+    --paper:   #FBFBF9;
+    --ink:     #0B1B2C;
+    --line:    rgba(10, 37, 64, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .demo-banner {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--warm),
+      var(--warm) 20px,
+      #E54A14 20px,
+      #E54A14 40px
+    );
+    color: white;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #B83A1F;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .hero {
+    background: linear-gradient(180deg, var(--deep) 0%, #0F3358 100%);
+    color: white;
+    padding: 80px 24px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 80% 20%, rgba(46, 122, 171, 0.4), transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(255, 107, 53, 0.15), transparent 40%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    backdrop-filter: blur(6px);
+  }
+  .hero-eyebrow .dot {
+    width: 6px; height: 6px;
+    background: var(--warm);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--warm);
+  }
+  .hero h1 {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--warm);
+    font-weight: 400;
+  }
+  .hero p.lede {
+    font-size: 18px;
+    color: var(--ice-100);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .main {
+    flex: 1;
+    padding: 60px 24px 80px;
+    background: var(--paper);
+    margin-top: -40px;
+    position: relative;
+    z-index: 3;
+  }
+  .grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ice-500), var(--warm));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .card:hover {
+    border-color: var(--ice-300);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -20px rgba(10, 37, 64, 0.18);
+  }
+  .card:hover::before { transform: scaleX(1); }
+
+  .card-icon {
+    width: 56px; height: 56px;
+    background: var(--ice-50);
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    color: var(--ice-500);
+  }
+  .card h2 {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--deep);
+    margin-bottom: 10px;
+  }
+  .card p {
+    color: rgba(11, 27, 44, 0.7);
+    font-size: 15px;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--warm);
+    font-size: 15px;
+    transition: gap 0.2s;
+  }
+  .card:hover .card-link { gap: 12px; }
+
+  .info {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 32px 36px;
+    background: white;
+    border: 1px dashed var(--ice-300);
+    border-radius: 16px;
+  }
+  .info h3 {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--deep);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .info p {
+    color: rgba(11, 27, 44, 0.75);
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  .info ul {
+    color: rgba(11, 27, 44, 0.75);
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  .info li { margin-bottom: 4px; }
+  .info strong { color: var(--deep); }
+
+  footer {
+    background: #050E1A;
+    color: rgba(220, 234, 243, 0.7);
+    padding: 24px;
+    text-align: center;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  ⚠ Demo mockups · Created for proposal review · Not live sites or accounts
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">
+      <span class="dot"></span>
+      Proposal Package · Mobile, AL HVAC
+    </span>
+    <h1>Polar Air Solutions<br><em>example mockups</em></h1>
+    <p class="lede">Two mockups demonstrating the proposed website and social presence. All stats, follower counts, reviews, and contact information are clearly-marked placeholders.</p>
+  </div>
+</section>
+
+<div class="main">
+  <div class="grid">
+
+    <a href="website.html" class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <h2>Website mockup</h2>
+      <p>Full single-page example site with hero, services grid, maintenance plan, testimonials section, service area, and footer. Includes a Progressive Web App install prompt to demonstrate the home-screen install flow.</p>
+      <span class="card-link">View website mockup
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <a href="social.html" class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      </div>
+      <h2>Social mockups</h2>
+      <p>Branded Facebook, X, and TikTok profile mockups with sample posts in Polar Air's voice. Includes weekly posting cadence calendar showing what AI-assisted, human-reviewed posting delivers across platforms.</p>
+      <span class="card-link">View social mockups
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <div class="info">
+    <h3>About these mockups</h3>
+    <p>These are <strong>visual design mockups</strong>, not the live site or live social accounts. They demonstrate the proposed look, feel, and content strategy.</p>
+    <p style="margin-top: 12px;"><strong>What's shown:</strong></p>
+    <ul>
+      <li>The visual design system and brand direction</li>
+      <li>Page structure, services covered, and tone of voice</li>
+      <li>Sample social post copy demonstrating Gulf Coast HVAC seasonality</li>
+      <li>The Progressive Web App home-screen install pattern</li>
+    </ul>
+    <p style="margin-top: 12px;"><strong>What's a placeholder:</strong></p>
+    <ul>
+      <li>All numbers (years in business, review count, follower counts, engagement, view counts)</li>
+      <li>All testimonial quotes and customer names</li>
+      <li>Phone number (uses 555-prefix reserved for fictional use)</li>
+      <li>Email, license number, and other contact details</li>
+    </ul>
+    <p style="margin-top: 14px;">Real numbers, real reviews, and real contact details would replace every <code>[bracketed]</code> placeholder before any production launch.</p>
+  </div>
+</div>
+
+<footer>
+  Demo mockup package · Created for proposal review only
+</footer>
+
+</body>
+</html>
