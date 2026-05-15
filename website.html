@@ -1082,11 +1082,23 @@ footer { background: #050E1A; color: var(--ice-200); padding: 60px 24px 28px; }
           </div>
           <div class="form-group">
             <label for="b-time">Time Preference</label>
-            <select id="b-time" name="timeWindow">
+            <select id="b-time" name="preferredTimeOfDay">
+              <option value="flexible">Any time works</option>
               <option value="morning">Morning (8 am – 12 pm)</option>
               <option value="afternoon">Afternoon (12 pm – 5 pm)</option>
               <option value="evening">Evening (5 pm – 8 pm)</option>
-              <option value="any">Any time works</option>
+            </select>
+          </div>
+            <div class="form-group">
+            <label for="b-address">Service Address</label>
+            <input type="text" id="b-address" name="address" required placeholder="123 Main St, Mobile, AL" autocomplete="street-address">
+          </div>
+          <div class="form-group">
+            <label for="b-urgency">How urgent is this?</label>
+            <select id="b-urgency" name="urgency" required>
+              <option value="flexible">Flexible — no rush</option>
+              <option value="soon">Soon — within a few days</option>
+              <option value="emergency">Emergency — need help today</option>
             </select>
           </div>
           <div class="form-group form-group--full">
@@ -1286,6 +1298,11 @@ function adjustHeaderTop() {
 })();
 
 /* ========= BOOKING ========= */
+
+// UPDATE this slug once the client creates their DispatchForce account
+const ORG_SLUG = 'polar-air-express';
+const API_BASE = 'https://field-service-platform-web.vercel.app';
+
 function scrollToBooking() {
   document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
 }
@@ -1304,18 +1321,20 @@ async function submitBooking(e) {
   btn.disabled = true;
 
   const payload = {
+    orgSlug: ORG_SLUG,
+    serviceType: form.serviceType.value,
+    urgency: form.urgency.value,
+    preferredDate: form.preferredDate.value || null,
+    preferredTimeOfDay: form.preferredTimeOfDay.value,
     name: form.name.value.trim(),
     phone: form.phone.value.trim(),
-    email: form.email.value.trim(),
-    serviceType: form.serviceType.value,
-    preferredDate: form.preferredDate.value,
-    timeWindow: form.timeWindow.value,
-    notes: form.notes.value.trim(),
-    source: 'website-widget',
+    email: form.email.value.trim() || null,
+    address: form.address.value.trim(),
+    notes: form.notes.value.trim() || null,
   };
 
   try {
-    const res = await fetch('https://field-service-platform-web.vercel.app/api/bookings/widget', {
+    const res = await fetch(`${API_BASE}/api/bookings/widget`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -1326,6 +1345,9 @@ async function submitBooking(e) {
   } catch (err) {
     form.style.display = 'none';
     document.getElementById('bookingError').style.display = 'block';
+    // Re-enable form so user can try again or call
+    btn.textContent = 'Request Appointment';
+    btn.disabled = false;
   }
 }
 </script>
