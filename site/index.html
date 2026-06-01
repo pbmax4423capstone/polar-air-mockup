@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polar Air Express | HVAC Contractor — Mobile, AL</title>
+<meta name="description" content="Family-owned HVAC contractor serving Mobile and Baldwin County, AL. AC repair, installation, heating, and emergency service. Call (251) 555-0199.">
+<link rel="canonical" href="https://polarairexpress.net/">
+<link rel="icon" type="image/png" href="logos/logo-1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ===== THEME VARIABLES ===== */
+:root {
+  --ice-50:  #EFF7FB;
+  --ice-100: #D8ECF5;
+  --ice-200: #AACFE5;
+  --ice-300: #70B0D0;
+  --ice-500: #2D8FBF;
+  --deep:    #0B2447;
+  --deep-2:  #123363;
+  --warm:    #2D8FBF;
+  --warm-2:  #3FA8D6;
+  --ink:     #0B1B2C;
+  --paper:   #FBFBF9;
+  --line:    rgba(11, 36, 71, 0.12);
+}
+
+/* ===== BASE RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, .display {
+  font-family: 'Bricolage Grotesque', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-variation-settings: "opsz" 32;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ===== TOP BAR ===== */
+.topbar { background: var(--deep); color: var(--ice-100); font-size: 13px; padding: 8px 0; }
+.topbar-inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 24px;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.topbar-left { display: flex; gap: 20px; opacity: .85; }
+.topbar-left span { display: inline-flex; align-items: center; gap: 6px; }
+.dot-live {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+}
+.topbar a.phone { font-weight: 700; color: white; letter-spacing: 0.02em; }
+.topbar a.phone:hover { color: var(--warm-2); }
+
+/* ===== NAV ===== */
+header {
+  background: rgba(251,251,249,0.92);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+}
+.nav-inner {
+  max-width: 1280px; margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Bricolage Grotesque', serif;
+  font-weight: 700; font-size: 20px;
+  letter-spacing: -0.02em; color: var(--deep);
+}
+.logo-img {
+  height: 50px; width: auto;
+  display: block; border-radius: 4px;
+  transition: opacity 0.2s;
+}
+.logo-img-hidden { display: none; }
+.logo-text-fallback {
+  display: none; align-items: center; gap: 10px;
+}
+.logo-mark {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--ice-500), var(--deep));
+  border-radius: 10px; display: grid; place-items: center;
+  position: relative; overflow: hidden;
+}
+.logo-mark::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent 50%);
+}
+.logo-mark svg { color: white; position: relative; z-index: 1; }
+nav ul { display: flex; gap: 24px; list-style: none; }
+nav a { font-size: 15px; font-weight: 500; color: var(--ink); padding: 4px 0; }
+nav a:hover { color: var(--ice-500); }
+.cta-btn {
+  background: var(--warm); color: white;
+  padding: 11px 20px; border-radius: 999px;
+  font-weight: 600; font-size: 14px; border: none; cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  font-family: 'Manrope', sans-serif;
+}
+.cta-btn:hover { background: var(--warm-2); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.22); }
+@media (max-width: 900px) { nav { display: none; } }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, var(--deep) 0%, var(--deep-2) 100%);
+  color: white; padding: 90px 24px 130px; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(46,122,171,0.4), transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(255,107,53,0.15), transparent 40%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+.hero-inner {
+  max-width: 1280px; margin: 0 auto; position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center;
+}
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px; border-radius: 999px;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+  margin-bottom: 28px; backdrop-filter: blur(6px);
+}
+.eyebrow .dot { width: 6px; height: 6px; background: var(--warm); border-radius: 50%; box-shadow: 0 0 8px var(--warm); }
+.hero h1 { font-size: clamp(42px, 6vw, 78px); margin-bottom: 24px; }
+.hero h1 .accent { color: transparent; -webkit-text-stroke: 1.5px var(--warm); font-style: italic; }
+.hero h1 .glow {
+  background: linear-gradient(120deg, #fff 30%, var(--ice-200) 70%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero p.lede { font-size: 19px; color: var(--ice-200); max-width: 540px; margin-bottom: 36px; }
+.hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-secondary {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+  color: white; padding: 12px 22px; border-radius: 999px;
+  font-weight: 600; font-size: 14px; transition: all 0.2s; backdrop-filter: blur(6px);
+  cursor: pointer; font-family: 'Manrope', sans-serif;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+.hero-trust {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12);
+}
+.trust-item .num { font-family: 'Bricolage Grotesque', serif; font-size: 32px; font-weight: 700; color: white; line-height: 1; }
+.trust-item .label { font-size: 12px; color: var(--ice-300); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+/* ===== TEMP CARD ===== */
+.temp-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 24px;
+  padding: 32px; backdrop-filter: blur(14px); position: relative; overflow: hidden;
+}
+.temp-card::before {
+  content: '';
+  position: absolute; top: -50%; right: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, var(--warm) 0%, transparent 35%);
+  opacity: 0.18;
+}
+.temp-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: relative; }
+.temp-card-header h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ice-200); }
+.live-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #4ade80; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.temp-display { font-family: 'Bricolage Grotesque', serif; font-size: 96px; font-weight: 700; letter-spacing: -0.04em; color: white; line-height: 1; position: relative; }
+.temp-display sup { font-size: 36px; color: var(--warm); vertical-align: top; margin-left: 4px; }
+.temp-meta { font-size: 14px; color: var(--ice-200); margin: 12px 0 24px; position: relative; }
+.temp-action {
+  width: 100%; background: var(--warm); color: white;
+  padding: 14px; border-radius: 12px; font-weight: 600; font-size: 15px;
+  text-align: center; border: none; cursor: pointer; position: relative; transition: all 0.2s;
+  font-family: 'Manrope', sans-serif;
+}
+.temp-action:hover { background: var(--warm-2); }
+
+/* ===== SECTION COMMONS ===== */
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-header {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; margin-bottom: 60px; align-items: end;
+}
+@media (max-width: 800px) { .section-header { grid-template-columns: 1fr; gap: 24px; } }
+.section-eyebrow {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--ice-500); margin-bottom: 16px;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.section-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--ice-500); }
+.section-header h2 { font-size: clamp(36px, 5vw, 56px); }
+.section-header p { font-size: 17px; color: rgba(11,27,44,0.7); }
+
+/* ===== SERVICES ===== */
+.services { padding: 100px 24px; background: var(--paper); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card {
+  background: white; border: 1px solid var(--line);
+  border-radius: 20px; padding: 36px 32px;
+  transition: all 0.3s; position: relative; overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--ice-500), var(--warm));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+}
+.service-card:hover { border-color: var(--ice-300); transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(10,37,64,0.15); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon { width: 56px; height: 56px; background: var(--ice-50); border-radius: 14px; display: grid; place-items: center; margin-bottom: 24px; color: var(--ice-500); }
+.service-card h3 { font-size: 24px; margin-bottom: 12px; color: var(--deep); }
+.service-card p { color: rgba(11,27,44,0.7); font-size: 15px; margin-bottom: 20px; }
+.service-card ul { list-style: none; margin-bottom: 24px; }
+.service-card li { font-size: 14px; padding: 6px 0; color: rgba(11,27,44,0.7); display: flex; align-items: center; gap: 10px; }
+.service-card li::before { content: ''; width: 5px; height: 5px; background: var(--warm); border-radius: 50%; flex-shrink: 0; }
+.service-link { font-size: 14px; font-weight: 600; color: var(--deep); display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+.service-link:hover { gap: 10px; color: var(--warm); }
+
+/* ===== FEATURE STRIP ===== */
+.feature-strip { background: var(--deep); color: white; padding: 0; position: relative; overflow: hidden; }
+.feature-strip-inner {
+  max-width: 1280px; margin: 0 auto; padding: 80px 24px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+@media (max-width: 900px) { .feature-strip-inner { grid-template-columns: 1fr; gap: 40px; } }
+.feature-strip h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 20px; }
+.feature-strip h2 em { font-style: italic; color: var(--warm); font-weight: 400; }
+.feature-strip p { color: var(--ice-200); font-size: 17px; margin-bottom: 24px; }
+.feature-list { list-style: none; display: grid; gap: 16px; }
+.feature-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
+}
+.feature-list .check { width: 32px; height: 32px; background: var(--warm); border-radius: 8px; display: grid; place-items: center; flex-shrink: 0; }
+.feature-list strong { display: block; margin-bottom: 4px; font-size: 15px; }
+.feature-list span { color: var(--ice-200); font-size: 14px; }
+
+/* ===== MAINTENANCE PLAN ===== */
+.plan { padding: 100px 24px; background: var(--ice-50); position: relative; }
+.plan-card {
+  max-width: 1100px; margin: 0 auto; background: white;
+  border-radius: 28px; padding: 60px;
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;
+  box-shadow: 0 30px 60px -20px rgba(10,37,64,0.15); border: 1px solid var(--line);
+}
+@media (max-width: 900px) { .plan-card { grid-template-columns: 1fr; padding: 40px 28px; gap: 32px; } }
+.plan-badge { display: inline-block; background: var(--warm); color: white; padding: 6px 14px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+.plan h2 { font-size: 44px; margin-bottom: 16px; color: var(--deep); }
+.plan p { color: rgba(11,27,44,0.7); margin-bottom: 28px; font-size: 16px; }
+.plan-benefits { list-style: none; display: grid; gap: 12px; margin-bottom: 28px; }
+.plan-benefits li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--deep); }
+.plan-benefits li svg { color: var(--warm); flex-shrink: 0; }
+.plan-price { background: var(--ice-50); border-radius: 20px; padding: 36px; text-align: center; border: 1px dashed var(--ice-300); }
+.plan-price .amount { font-family: 'Bricolage Grotesque', serif; font-size: 64px; font-weight: 700; color: var(--deep); line-height: 1; }
+.plan-price .amount sup { font-size: 24px; vertical-align: top; }
+.plan-price .amount sub { font-size: 16px; color: rgba(11,27,44,0.5); font-weight: 500; }
+.plan-price .save { font-size: 13px; color: var(--warm); font-weight: 600; margin: 12px 0 24px; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { padding: 100px 24px; background: var(--paper); }
+.testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+@media (max-width: 800px) { .testimonial-grid { grid-template-columns: 1fr; } }
+.testimonial { background: white; border: 1px solid var(--line); border-radius: 20px; padding: 36px; position: relative; }
+.stars { color: var(--warm); margin-bottom: 16px; font-size: 18px; letter-spacing: 2px; }
+.testimonial blockquote { font-size: 18px; line-height: 1.5; color: var(--deep); margin-bottom: 24px; font-family: 'Bricolage Grotesque', serif; font-weight: 500; letter-spacing: -0.01em; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+.avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--ice-300), var(--ice-500)); display: grid; place-items: center; color: white; font-weight: 700; font-size: 14px; }
+.testimonial-author strong { display: block; font-size: 14px; }
+.testimonial-author span { font-size: 13px; color: rgba(11,27,44,0.6); }
+.testimonial.placeholder-card {
+  background: repeating-linear-gradient(45deg, #FFF8F4, #FFF8F4 8px, #FFEEE5 8px, #FFEEE5 16px);
+  border: 2px dashed #FF6B35;
+}
+.testimonial.placeholder-card blockquote { color: #B83A1F; font-style: italic; font-family: 'Manrope', sans-serif; font-weight: 500; font-size: 15px; }
+.testimonial.placeholder-card .avatar { background: #FF6B35; }
+
+/* ===== SERVICE AREA ===== */
+.area { background: var(--deep); color: white; padding: 80px 24px; }
+.area-inner { max-width: 1280px; margin: 0 auto; text-align: center; }
+.area h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px; }
+.area > .area-inner > p { color: var(--ice-200); margin: 0 auto 48px; max-width: 560px; }
+.area-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.area-tag { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 10px 18px; border-radius: 999px; font-size: 14px; color: var(--ice-100); }
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background: linear-gradient(135deg, var(--deep) 0%, var(--deep-2) 100%);
+  padding: 80px 24px; color: white; position: relative; overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute; top: -50%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+}
+.final-cta-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px;
+  align-items: center; position: relative; z-index: 1;
+}
+@media (max-width: 800px) { .final-cta-inner { grid-template-columns: 1fr; text-align: center; } }
+.final-cta h2 { font-size: clamp(32px, 4.5vw, 52px); margin-bottom: 12px; }
+.final-cta p { font-size: 17px; opacity: 0.9; }
+.final-cta-buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 800px) { .final-cta-buttons { justify-content: center; } }
+.btn-white {
+  background: white; color: var(--deep);
+  padding: 16px 28px; border-radius: 999px; font-weight: 700; font-size: 15px;
+  display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s;
+}
+.btn-white:hover { transform: translateY(-2px); }
+.btn-outline-white {
+  border: 2px solid white; color: white; background: transparent;
+  padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+}
+.btn-outline-white:hover { background: white; color: var(--deep); }
+
+/* ===== BOOKING SECTION ===== */
+.booking {
+  padding: 100px 24px;
+  background: var(--ice-50);
+}
+.booking-card {
+  max-width: 860px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 40px -20px rgba(10,37,64,0.12);
+}
+@media (max-width: 700px) { .booking-card { padding: 28px 20px; } }
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) { .booking-grid { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group--full { grid-column: 1 / -1; }
+.form-group label {
+  font-size: 13px; font-weight: 600;
+  color: var(--deep); letter-spacing: 0.02em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--ice-500);
+  box-shadow: 0 0 0 3px rgba(46,122,171,0.12);
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.booking-actions {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.booking-note { font-size: 13px; color: rgba(11,27,44,0.55); }
+.booking-result {
+  text-align: center; padding: 40px 24px;
+  border-radius: 16px;
+}
+.booking-result--success { background: #F0FDF4; border: 1.5px solid #86EFAC; }
+.booking-result--error  { background: #FFF8F4; border: 1.5px solid #FCA5A5; }
+.result-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 26px; font-weight: 700; margin: 0 auto 16px;
+}
+.booking-result--success .result-icon { background: #22C55E; color: white; }
+.booking-result--error  .result-icon { background: #EF4444; color: white; }
+.booking-result h3 { font-size: 24px; margin-bottom: 10px; color: var(--deep); }
+.booking-result p { font-size: 16px; color: rgba(11,27,44,0.7); }
+.booking-result a { color: var(--ice-500); font-weight: 600; }
+
+/* ===== FOOTER ===== */
+footer { background: #050E1A; color: var(--ice-200); padding: 60px 24px 28px; }
+.footer-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 40px;
+}
+@media (max-width: 800px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+.footer-col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: white; margin-bottom: 18px; font-family: 'Manrope', sans-serif; font-weight: 700; }
+.footer-col ul { list-style: none; display: grid; gap: 10px; }
+.footer-col a { font-size: 14px; opacity: 0.8; }
+.footer-col a:hover { opacity: 1; color: var(--warm); }
+.footer-brand p { font-size: 14px; opacity: 0.7; margin: 16px 0; max-width: 280px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.06); border-radius: 8px; display: grid; place-items: center; transition: background 0.2s; }
+.footer-social a:hover { background: var(--warm); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; opacity: 0.6; }
+.footer-logo-img { height: 44px; width: auto; border-radius: 4px; }
+.footer-logo-text { color: white; display: flex; align-items: center; gap: 10px; font-family: 'Bricolage Grotesque', serif; font-weight: 700; font-size: 20px; }
+
+</style>
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><span class="dot-live"></span>24/7 Emergency Service Available</span>
+      <span style="opacity:0.7">•</span>
+      <span>Licensed &amp; Insured in Alabama</span>
+    </div>
+    <a href="tel:+12515550199" class="phone">📞 (251) 555-0199</a>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header id="mainHeader">
+  <div class="nav-inner">
+    <a href="#" class="logo" id="logoWrap">
+      <img id="logo-img" class="logo-img" src="logos/logo-1.png" alt="Polar Air Express"
+           onerror="this.classList.add('logo-img-hidden'); document.querySelector('.logo-text-fallback').style.display='flex'">
+      <div class="logo-text-fallback">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M5 5l14 14M5 19l14-14M2 12h20"/>
+          </svg>
+        </div>
+        <span>Polar Air <span style="color:var(--warm);font-weight:400;font-style:italic">Express</span></span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#plan">Maintenance</a></li>
+        <li><a href="#area">Service Area</a></li>
+        <li><a href="#booking">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cta-btn" onclick="scrollToBooking()">
+      Schedule Service
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Mobile, AL · [Years in business — TBD]
+      </span>
+      <h1>
+        Cool comfort<br>
+        for the <span class="accent">Gulf Coast.</span><br>
+        <span class="glow">Done right.</span>
+      </h1>
+      <p class="lede">
+        From Spring Hill to Daphne, we keep homes and businesses comfortable through every Mobile summer, every cold front, and every storm season. Same-day service, fair prices, and technicians who treat your home like their own.
+      </p>
+      <div class="hero-cta-row">
+        <button class="cta-btn" onclick="scrollToBooking()">
+          Book Free Estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="tel:+12515550199" class="btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (251) 555-0199
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="num">[##]</div><div class="label">Years Local</div></div>
+        <div class="trust-item"><div class="num">[#.#★]</div><div class="label">Google Reviews</div></div>
+        <div class="trust-item"><div class="num">[#,###+]</div><div class="label">Homes Served</div></div>
+        <div class="trust-item"><div class="num">24/7</div><div class="label">Emergency</div></div>
+      </div>
+    </div>
+    <div class="temp-card">
+      <div class="temp-card-header">
+        <h3>Mobile, AL · Today</h3>
+        <span class="live-badge"><span class="dot-live"></span>Live</span>
+      </div>
+      <div class="temp-display">94<sup>°F</sup></div>
+      <div class="temp-meta">
+        Heat index 108°F · Humidity 78%<br>
+        Your AC is working overtime. Schedule a tune-up now.
+      </div>
+      <button class="temp-action" onclick="scrollToBooking()">Get a Free Cooling Check</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">What we do</div>
+        <h2>Every HVAC service<br>your home needs.</h2>
+      </div>
+      <p>Residential and light-commercial HVAC service across Mobile and Baldwin counties. Same techs, same trucks, same care — whether you need a $79 tune-up or a full system replacement.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 0L9 5m3 3l3-3M2 12h6m0 0L5 9m3 3l-3 3M22 12h-6m0 0l3-3m-3 3l3 3M12 22v-6m0 0l-3 3m3-3l3 3"/></svg>
+        </div>
+        <h3>AC Installation &amp; Repair</h3>
+        <p>Heat pumps, central air, ductless mini-splits. Carrier, Trane, Rheem, Goodman — we install and service every major brand.</p>
+        <ul>
+          <li>Same-day diagnostics</li>
+          <li>Free estimates on replacements</li>
+          <li>Up to 12-year warranties</li>
+        </ul>
+        <a href="#" class="service-link">Learn more →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l-1.5 4.5L8 10l4.5 1.5L14 16l1.5-4.5L20 10l-4.5-1.5z"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
+        </div>
+        <h3>Heating &amp; Furnace</h3>
+        <p>Mobile gets cold too. Gas furnaces, heat pumps, electric strip heat — repairs, replacements, and tune-ups.</p>
+        <ul>
+          <li>Pre-winter system check</li>
+          <li>Carbon monoxide testing</li>
+          <li>High-efficiency upgrades</li>
+        </ul>
+        <a href="#" class="service-link">Learn more →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Indoor Air Quality</h3>
+        <p>Gulf Coast humidity, pollen, mold — we tackle them all. Whole-home dehumidifiers, UV air purifiers, and duct cleaning.</p>
+        <ul>
+          <li>Whole-home dehumidification</li>
+          <li>UV light installation</li>
+          <li>Duct sealing &amp; cleaning</li>
+        </ul>
+        <a href="#" class="service-link">Learn more →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Maintenance Plans</h3>
+        <p>Two visits a year, priority dispatch, and 15% off every repair. The plan that pays for itself.</p>
+        <ul>
+          <li>Spring + fall tune-ups</li>
+          <li>Skip the dispatch fee</li>
+          <li>15% off all repairs</li>
+        </ul>
+        <a href="#plan" class="service-link">See plan details →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l6-6-6-6M21 6h-9a3 3 0 00-3 3v9"/></svg>
+        </div>
+        <h3>Light Commercial</h3>
+        <p>Restaurants, retail, offices, churches — we keep small commercial spaces running. Rooftop units, package units, mini-splits.</p>
+        <ul>
+          <li>After-hours service available</li>
+          <li>Custom maintenance contracts</li>
+          <li>Light commercial up to 25 tons</li>
+        </ul>
+        <a href="#" class="service-link">Learn more →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Emergency Service</h3>
+        <p>AC out at 2 AM in August? We answer the phone. Real technicians, dispatched fast — not just a call center.</p>
+        <ul>
+          <li>24/7/365 dispatch</li>
+          <li>2-hour response goal</li>
+          <li>No after-hours surcharges for plan members</li>
+        </ul>
+        <a href="tel:+12515550199" class="service-link">Call now →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="feature-strip" id="why-us">
+  <div class="feature-strip-inner">
+    <div>
+      <div class="section-eyebrow" style="color:var(--ice-300)">The Polar Air difference</div>
+      <h2>Why Mobile homeowners<br>keep <em>calling us back.</em></h2>
+      <p>We're not a national chain. We're a family business that lives here, services here, and answers to our neighbors. When something goes wrong, the owner picks up the phone.</p>
+      <button class="cta-btn" style="margin-top:12px">
+        Read our reviews
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <ul class="feature-list">
+      <li>
+        <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><strong>Upfront pricing, no surprises</strong><span>Flat-rate quotes before any work begins. You'll never see a surprise charge.</span></div>
+      </li>
+      <li>
+        <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><strong>NATE-certified technicians</strong><span>Continuous training, background checks, drug testing. No subcontractors — ever.</span></div>
+      </li>
+      <li>
+        <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><strong>Hurricane-ready service</strong><span>We stock parts before storms hit and prioritize plan members during outages.</span></div>
+      </li>
+      <li>
+        <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><strong>100% satisfaction guarantee</strong><span>If you're not happy, we make it right. No fine print, no excuses.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== MAINTENANCE PLAN ===== -->
+<section class="plan" id="plan">
+  <div class="plan-card">
+    <div>
+      <span class="plan-badge">Most Popular</span>
+      <h2>The Polar Comfort Club</h2>
+      <p>Skip the breakdown. Two scheduled tune-ups a year keep your system running 30% more efficiently and double its lifespan. Plus, you skip to the front of the line when you need us most.</p>
+      <ul class="plan-benefits">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Spring AC tune-up + Fall heating tune-up</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 15% off all repairs, year-round</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Priority scheduling — first in line</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No emergency dispatch fees, ever</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Transferable to next homeowner</li>
+      </ul>
+    </div>
+    <div class="plan-price">
+      <div class="amount"><sup>$</sup>19<sub>/mo</sub></div>
+      <div class="save">or $199/year — save $29</div>
+      <button class="cta-btn" style="width:100%" onclick="scrollToBooking()">Join the Club</button>
+      <div style="font-size:12px;color:rgba(11,27,44,0.5);margin-top:14px">Cancel anytime. No long contracts.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">What neighbors say</div>
+        <h2>Trusted across Mobile<br>and Baldwin County.</h2>
+      </div>
+      <p>This section will display real customer reviews pulled from Google Business Profile and direct customer testimonials, refreshed monthly.</p>
+    </div>
+    <div class="testimonial-grid">
+      <article class="testimonial placeholder-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>[Real customer testimonial — to be sourced from Google Business Profile, Birdeye, or direct request]</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">[#]</div>
+          <div><strong>[Customer Name]</strong><span>[Neighborhood] · [Date]</span></div>
+        </div>
+      </article>
+      <article class="testimonial placeholder-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>[Real customer testimonial — to be sourced from Google Business Profile, Birdeye, or direct request]</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">[#]</div>
+          <div><strong>[Customer Name]</strong><span>[Neighborhood] · [Date]</span></div>
+        </div>
+      </article>
+      <article class="testimonial placeholder-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>[Real customer testimonial — to be sourced from Google Business Profile, Birdeye, or direct request]</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">[#]</div>
+          <div><strong>[Customer Name]</strong><span>[Neighborhood] · [Date]</span></div>
+        </div>
+      </article>
+      <article class="testimonial placeholder-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>[Real customer testimonial — to be sourced from Google Business Profile, Birdeye, or direct request]</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">[#]</div>
+          <div><strong>[Customer Name]</strong><span>[Neighborhood] · [Date]</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE AREA ===== -->
+<section class="area" id="area">
+  <div class="area-inner">
+    <div class="section-eyebrow" style="color:var(--ice-300);justify-content:center;display:inline-flex">Where we work</div>
+    <h2>Serving Mobile and Baldwin County.</h2>
+    <p>If you're within 45 minutes of downtown Mobile, we're your local HVAC team.</p>
+    <div class="area-tags">
+      <span class="area-tag">Mobile</span><span class="area-tag">Spring Hill</span>
+      <span class="area-tag">West Mobile</span><span class="area-tag">Tillmans Corner</span>
+      <span class="area-tag">Theodore</span><span class="area-tag">Saraland</span>
+      <span class="area-tag">Semmes</span><span class="area-tag">Citronelle</span>
+      <span class="area-tag">Chickasaw</span><span class="area-tag">Prichard</span>
+      <span class="area-tag">Daphne</span><span class="area-tag">Spanish Fort</span>
+      <span class="area-tag">Fairhope</span><span class="area-tag">Loxley</span>
+      <span class="area-tag">Robertsdale</span><span class="area-tag">Bay Minette</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="contact">
+  <div class="final-cta-inner">
+    <div>
+      <h2>Comfort can't wait.</h2>
+      <p>Call now or schedule online. Most days we can be at your door before sundown.</p>
+    </div>
+    <div class="final-cta-buttons">
+      <a href="tel:+12515550199" class="btn-white">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (251) 555-0199
+      </a>
+      <button class="btn-outline-white" onclick="scrollToBooking()">
+        Schedule Online
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOKING SECTION ===== -->
+<section class="booking" id="booking">
+  <div class="section-inner">
+    <div class="section-header" style="grid-template-columns:1fr;text-align:center;margin-bottom:40px">
+      <div>
+        <div class="section-eyebrow" style="justify-content:center">Schedule Service</div>
+        <h2>Book your appointment online.</h2>
+        <p style="margin-top:12px;font-size:16px;color:rgba(11,27,44,0.65);max-width:520px;margin-left:auto;margin-right:auto">
+          Fill out the form below and we'll confirm your appointment by text and email within 2 hours.
+        </p>
+      </div>
+    </div>
+    <div class="booking-card">
+      <form id="bookingForm" onsubmit="submitBooking(event)" novalidate>
+        <div class="booking-grid">
+          <div class="form-group">
+            <label for="b-name">Full Name</label>
+            <input type="text" id="b-name" name="name" required placeholder="Jane Smith" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone</label>
+            <input type="tel" id="b-phone" name="phone" required placeholder="(251) 555-0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="b-email">Email</label>
+            <input type="email" id="b-email" name="email" required placeholder="jane@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="b-service">Service Needed</label>
+            <select id="b-service" name="serviceType" required>
+              <option value="">Select a service…</option>
+              <option value="ac-repair">AC Repair</option>
+              <option value="ac-install">AC Installation / Replacement</option>
+              <option value="heating">Heating / Furnace</option>
+              <option value="maintenance">Maintenance Tune-Up</option>
+              <option value="iaq">Indoor Air Quality</option>
+              <option value="commercial">Light Commercial</option>
+              <option value="emergency">Emergency Service</option>
+              <option value="estimate">Free Estimate</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-date">Preferred Date</label>
+            <input type="date" id="b-date" name="preferredDate" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Time Preference</label>
+            <select id="b-time" name="preferredTimeOfDay">
+              <option value="flexible">Any time works</option>
+              <option value="morning">Morning (8 am – 12 pm)</option>
+              <option value="afternoon">Afternoon (12 pm – 5 pm)</option>
+              <option value="evening">Evening (5 pm – 8 pm)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-address">Service Address</label>
+            <input type="text" id="b-address" name="address" required placeholder="123 Main St, Mobile, AL" autocomplete="street-address">
+          </div>
+          <div class="form-group">
+            <label for="b-urgency">How urgent is this?</label>
+            <select id="b-urgency" name="urgency" required>
+              <option value="flexible">Flexible — no rush</option>
+              <option value="soon">Soon — within a few days</option>
+              <option value="emergency">Emergency — need help today</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="b-notes">Describe the Issue <span style="font-weight:400;opacity:.6">(optional)</span></label>
+            <textarea id="b-notes" name="notes" rows="3" placeholder="e.g. AC not cooling, making a clicking noise when it starts…"></textarea>
+          </div>
+        </div>
+        <div class="booking-actions">
+          <button type="submit" class="cta-btn" id="bookingSubmit" style="padding:14px 28px;font-size:15px">
+            Request Appointment
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="booking-note">We'll confirm by text &amp; email within 2 hours.</p>
+        </div>
+      </form>
+      <div id="bookingSuccess" class="booking-result booking-result--success" style="display:none">
+        <div class="result-icon">✓</div>
+        <h3>You're on the schedule!</h3>
+        <p>We'll text and email you a confirmation within 2 hours.<br>For emergencies, call <a href="tel:+12515550199">(251) 555-0199</a> now.</p>
+      </div>
+      <div id="bookingError" class="booking-result booking-result--error" style="display:none">
+        <div class="result-icon">!</div>
+        <h3>Couldn't submit online right now</h3>
+        <p>Please call us directly at <a href="tel:+12515550199">(251) 555-0199</a> to schedule your appointment — we answer 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <div class="footer-logo-text">
+        <img id="footer-logo-img" class="footer-logo-img" src="logos/logo-1.png" alt="Polar Air Express"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span style="display:none;align-items:center;gap:10px">
+          <div class="logo-mark" style="width:32px;height:32px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 5l14 14M5 19l14-14M2 12h20"/></svg>
+          </div>
+          Polar Air <em style="color:var(--warm);font-weight:400">Express</em>
+        </span>
+      </div>
+      <p>Family-owned HVAC contractor serving Mobile, AL and the Gulf Coast. Licensed, insured, and committed to your comfort.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.84-.1z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">AC Repair</a></li>
+        <li><a href="#">AC Installation</a></li>
+        <li><a href="#">Heating</a></li>
+        <li><a href="#">Indoor Air Quality</a></li>
+        <li><a href="#">Commercial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#booking">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+12515550199">(251) 555-0199</a></li>
+        <li><a href="mailto:info@polarairexpress.com">info@polarairexpress.com</a></li>
+        <li>Mobile, AL 36608</li>
+        <li>License #[AL HVAC — TBD]</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Polar Air Express, LLC. All rights reserved.</span>
+    <span>Privacy · Terms · Sitemap</span>
+  </div>
+</footer>
+
+<script>
+/* ========= BOOKING ========= */
+
+const ORG_SLUG = '5280-automations';
+const API_BASE = 'https://field-service-platform-ogaviw6ti-5280-automations.vercel.app';
+
+function scrollToBooking() {
+  document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Set min date to today
+(function() {
+  const d = document.getElementById('b-date');
+  if (d) d.min = new Date().toISOString().split('T')[0];
+})();
+
+async function submitBooking(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('bookingSubmit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const payload = {
+    orgSlug: ORG_SLUG,
+    serviceType: form.serviceType.value,
+    urgency: form.urgency.value,
+    preferredDate: form.preferredDate.value || null,
+    preferredTimeOfDay: form.preferredTimeOfDay.value,
+    name: form.name.value.trim(),
+    phone: form.phone.value.trim(),
+    email: form.email.value.trim() || null,
+    address: form.address.value.trim(),
+    notes: form.notes.value.trim() || null,
+  };
+
+  try {
+    const res = await fetch(`${API_BASE}/api/bookings/widget`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error('API ' + res.status);
+    form.style.display = 'none';
+    document.getElementById('bookingSuccess').style.display = 'block';
+  } catch (err) {
+    form.style.display = 'none';
+    document.getElementById('bookingError').style.display = 'block';
+    btn.textContent = 'Request Appointment';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
